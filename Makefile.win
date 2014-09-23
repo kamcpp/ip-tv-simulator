@@ -1,0 +1,108 @@
+# Project: ip-tv-simulator
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = src/AccessPoint.o src/main.o src/Road.o src/Simulator.o src/WorldObject.o src/Car.o src/CarStory.o src/CarStoryPool.o src/DefaultCarStoryFileReader.o src/DefaultWorldDynamics.o src/Lane.o src/RandomDistribution.o src/StringHelper.o src/utils.o src/AbstractNetworkInfrastructure.o src/CarStoryLoader.o src/DefaultIpTvWorld.o src/Environment.o src/NetworkDevice.o src/SimpleIpTvWorld.o src/WirelessNetworkInfrastructure.o src/Message.o src/SimulationResult.o src/TruncaExponentialDistribution.o src/CarStoryEvent.o src/TvChannelPool.o src/AbstractIpTvWorld.o $(RES)
+LINKOBJ  = src/AccessPoint.o src/main.o src/Road.o src/Simulator.o src/WorldObject.o src/Car.o src/CarStory.o src/CarStoryPool.o src/DefaultCarStoryFileReader.o src/DefaultWorldDynamics.o src/Lane.o src/RandomDistribution.o src/StringHelper.o src/utils.o src/AbstractNetworkInfrastructure.o src/CarStoryLoader.o src/DefaultIpTvWorld.o src/Environment.o src/NetworkDevice.o src/SimpleIpTvWorld.o src/WirelessNetworkInfrastructure.o src/Message.o src/SimulationResult.o src/TruncaExponentialDistribution.o src/CarStoryEvent.o src/TvChannelPool.o src/AbstractIpTvWorld.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib"  
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = ip-tv-simulator.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before ip-tv-simulator.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "ip-tv-simulator.exe" $(LIBS)
+
+src/AccessPoint.o: src/AccessPoint.cpp
+	$(CPP) -c src/AccessPoint.cpp -o src/AccessPoint.o $(CXXFLAGS)
+
+src/main.o: src/main.cpp
+	$(CPP) -c src/main.cpp -o src/main.o $(CXXFLAGS)
+
+src/Road.o: src/Road.cpp
+	$(CPP) -c src/Road.cpp -o src/Road.o $(CXXFLAGS)
+
+src/Simulator.o: src/Simulator.cpp
+	$(CPP) -c src/Simulator.cpp -o src/Simulator.o $(CXXFLAGS)
+
+src/WorldObject.o: src/WorldObject.cpp
+	$(CPP) -c src/WorldObject.cpp -o src/WorldObject.o $(CXXFLAGS)
+
+src/Car.o: src/Car.cpp
+	$(CPP) -c src/Car.cpp -o src/Car.o $(CXXFLAGS)
+
+src/CarStory.o: src/CarStory.cpp
+	$(CPP) -c src/CarStory.cpp -o src/CarStory.o $(CXXFLAGS)
+
+src/CarStoryPool.o: src/CarStoryPool.cpp
+	$(CPP) -c src/CarStoryPool.cpp -o src/CarStoryPool.o $(CXXFLAGS)
+
+src/DefaultCarStoryFileReader.o: src/DefaultCarStoryFileReader.cpp
+	$(CPP) -c src/DefaultCarStoryFileReader.cpp -o src/DefaultCarStoryFileReader.o $(CXXFLAGS)
+
+src/DefaultWorldDynamics.o: src/DefaultWorldDynamics.cpp
+	$(CPP) -c src/DefaultWorldDynamics.cpp -o src/DefaultWorldDynamics.o $(CXXFLAGS)
+
+src/Lane.o: src/Lane.cpp
+	$(CPP) -c src/Lane.cpp -o src/Lane.o $(CXXFLAGS)
+
+src/RandomDistribution.o: src/RandomDistribution.cpp
+	$(CPP) -c src/RandomDistribution.cpp -o src/RandomDistribution.o $(CXXFLAGS)
+
+src/StringHelper.o: src/StringHelper.cpp
+	$(CPP) -c src/StringHelper.cpp -o src/StringHelper.o $(CXXFLAGS)
+
+src/utils.o: src/utils.cpp
+	$(CPP) -c src/utils.cpp -o src/utils.o $(CXXFLAGS)
+
+src/AbstractNetworkInfrastructure.o: src/AbstractNetworkInfrastructure.cpp
+	$(CPP) -c src/AbstractNetworkInfrastructure.cpp -o src/AbstractNetworkInfrastructure.o $(CXXFLAGS)
+
+src/CarStoryLoader.o: src/CarStoryLoader.cpp
+	$(CPP) -c src/CarStoryLoader.cpp -o src/CarStoryLoader.o $(CXXFLAGS)
+
+src/DefaultIpTvWorld.o: src/DefaultIpTvWorld.cpp
+	$(CPP) -c src/DefaultIpTvWorld.cpp -o src/DefaultIpTvWorld.o $(CXXFLAGS)
+
+src/Environment.o: src/Environment.cpp
+	$(CPP) -c src/Environment.cpp -o src/Environment.o $(CXXFLAGS)
+
+src/NetworkDevice.o: src/NetworkDevice.cpp
+	$(CPP) -c src/NetworkDevice.cpp -o src/NetworkDevice.o $(CXXFLAGS)
+
+src/SimpleIpTvWorld.o: src/SimpleIpTvWorld.cpp
+	$(CPP) -c src/SimpleIpTvWorld.cpp -o src/SimpleIpTvWorld.o $(CXXFLAGS)
+
+src/WirelessNetworkInfrastructure.o: src/WirelessNetworkInfrastructure.cpp
+	$(CPP) -c src/WirelessNetworkInfrastructure.cpp -o src/WirelessNetworkInfrastructure.o $(CXXFLAGS)
+
+src/Message.o: src/Message.cpp
+	$(CPP) -c src/Message.cpp -o src/Message.o $(CXXFLAGS)
+
+src/SimulationResult.o: src/SimulationResult.cpp
+	$(CPP) -c src/SimulationResult.cpp -o src/SimulationResult.o $(CXXFLAGS)
+
+src/TruncaExponentialDistribution.o: src/TruncaExponentialDistribution.cpp
+	$(CPP) -c src/TruncaExponentialDistribution.cpp -o src/TruncaExponentialDistribution.o $(CXXFLAGS)
+
+src/CarStoryEvent.o: src/CarStoryEvent.cpp
+	$(CPP) -c src/CarStoryEvent.cpp -o src/CarStoryEvent.o $(CXXFLAGS)
+
+src/TvChannelPool.o: src/TvChannelPool.cpp
+	$(CPP) -c src/TvChannelPool.cpp -o src/TvChannelPool.o $(CXXFLAGS)
+
+src/AbstractIpTvWorld.o: src/AbstractIpTvWorld.cpp
+	$(CPP) -c src/AbstractIpTvWorld.cpp -o src/AbstractIpTvWorld.o $(CXXFLAGS)
